@@ -119,6 +119,10 @@ function handleClick() {
         btn.style.border = 'none'; // Rimuovi bordo per tutti i bottoni
     });
 
+    // Rimuovi il testo dall'input di ricerca e filtra per il range selezionato
+    researchInput.value = ''; // Cancella il testo nell'input di ricerca
+    filterUsers(this.id); 
+
     this.classList.add('selected'); // Aggiungi la classe 'selected' al bottone cliccato
     this.style.color = 'rgb(2, 0, 74)'; // Cambia colore del testo per il bottone cliccato
     this.style.backgroundColor = 'white'; // Cambia colore di sfondo per il bottone cliccato
