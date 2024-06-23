@@ -1,0 +1,192 @@
+body {
+    font-family: 'Optima', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(2, 0, 74);
+    font-family: 'Optima', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #6e6e6e16;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; /* bottoni a capo */
+    margin-bottom: 20px;
+    padding: 1em;
+}
+
+#buttons button {
+    background-color: rgb(2, 0, 74); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    margin: 0 5px; 
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s, color 0.3s; 
+    white-space: nowrap; 
+}
+
+button:hover {
+    background-color: #fcfcfc; /* Cambia colore di sfondo al passaggio del mouse */
+}
+
+#buttons button:hover {
+    background-color: rgb(2, 0, 74); /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap; /* Impedisce al testo di andare a capo */
+}
+
+#research {
+    background-color: white;
+    color: rgb(2, 0, 74); 
+    border: 1px solid rgb(2, 0, 74); 
+    padding: 10px 20px; 
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: text; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#research::placeholder {
+    color: rgb(2, 0, 74); 
+}
+
+#research:focus {
+    outline: none; 
+    background-color: #6e6e6e16; 
+    color: rgb(2, 0, 74); 
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 16px; 
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px; 
+    flex: 0 1 calc(25% - 32px); 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px; 
+}
+
+.card h2 {
+    margin: 0 0 12px; 
+    color: rgb(2, 0, 74);
+    font-size: 24px;
+    text-align: center;
+}
+
+.card p {
+    margin: 4px; 
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Media query per tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .user {
+        font-size: 14px;
+    }
+
+    #card-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 32px); /* Due card per riga */
+    }
+}
+
+/* Media query per smartphone */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 44px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .user {
+        font-size: 12px;
+    }
+
+    #control-container {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #buttons {
+        margin-bottom: 10px; 
+    }
+
+    #research {
+        margin: 20px 0;
+        width: calc(100% - 5px);
+        box-sizing: border-box;
+    }
+
+    #card-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card {
+        flex: 0 0 calc(100% - 32px); /* Una card per riga */
+    }
+}

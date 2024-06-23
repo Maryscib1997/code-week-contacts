@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contacts</h1>
+    </header>
+    <section>
+        <div id="buttons">
+            <button id="button1" onclick="filterUsers('AE')">A-E</button>
+            <button id="button2" onclick="filterUsers('FL')">F-L</button>
+            <button id="button3" onclick="filterUsers('MZ')">M-Z</button>
+            <button id="button4" onclick="filterUsers('ALL')">TUTTI</button>
+            <div>
+                <input type="text" placeholder="Cerca" id="research">
+            </div>
+        </div>
+            <div id="card-container">
+            <!-- Elenco degli utenti verrà inserito qui -->
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
